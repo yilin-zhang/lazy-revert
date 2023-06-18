@@ -17,9 +17,6 @@
   "Auto save file when emacs idle."
   :group 'lazy-revert)
 
-(defvar lazy-revert-mode-hook nil
-  "The hook for lazy-revert-mode.")
-
 ;;;###autoload
 (defun lazy-revert--visible-buffers (&optional buffer-list)
   "Return a list of visible buffers (i.e. not buried)."

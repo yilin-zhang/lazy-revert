@@ -2,11 +2,7 @@
 
 ;;; Commentary:
 
-;; Lazy revert is a revert mechanism borrowed from Doom Emacs.
-;; Only revert a buffer if it is visible and when the user:
-;; a) saves a file
-;; b) switches to a buffer (or its window)
-;; c) focuses Emacs (after using another program)
+;; An alternative auto-revert solution extracted from Doom Emacs.
 
 ;;; Code:
 
@@ -66,7 +62,7 @@
 
 ;;;###autoload
 (define-minor-mode lazy-revert-mode
-  "Toggle `lazy-revert-mode' on of off."
+  "Toggle `lazy-revert-mode' on or off."
   :global t
   :group 'lazy-revert
   (if lazy-revert-mode

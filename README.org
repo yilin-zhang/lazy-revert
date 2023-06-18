@@ -1,12 +1,18 @@
 #+title: Lazy Revert
 
 * Introduction
-Lazy Revert provides an auto-revert mechanism borrowed from [[https://github.com/doomemacs/doomemacs][Doom Emacs]]. The idea
-is to only revert visible buffers when necessary.
+Lazy Revert is a very simple package that provides an alternative auto-revert
+solution extracted from [[https://github.com/doomemacs/doomemacs][Doom Emacs]].
+
+It only reverts visible buffers when the user:
+a. saves a file
+b. switches to a buffer (or its window)
+c. focuses Emacs (after using another program)
 
 Thank [[https://github.com/hlissner][@hlissner]] for the original implementation.
 
 * Installation
+An example of using =use-package= and =quelpa=:
 #+begin_src elisp
 (use-package lazy-revert
   :ensure nil
@@ -21,4 +27,8 @@ Thank [[https://github.com/hlissner][@hlissner]] for the original implementation
         ;; Only prompts for confirmation when buffer is unsaved.
         revert-without-query (list ".")))
 #+end_src
+
+* Usage
+Make sure you have =global-auto-revert-mode= and =auto-revert-mode= disabled,
+then simply enable =lazy-revert-mode=, which is a global minor mode.
 
